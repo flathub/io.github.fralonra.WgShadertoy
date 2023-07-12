@@ -23,7 +23,7 @@ modules:
     buildsystem: simple
     build-commands:
       - cargo --offline fetch --manifest-path Cargo.toml --verbose
-      - cargo --offline build --release --verbose
+      - GIT_COMMIT_HASH=$(git rev-parse --short HEAD) cargo --offline build --release --verbose
       - install -Dm755 target/release/wgshadertoy           /app/bin/wgshadertoy
       - install -Dm644 extra/linux/WgShadertoy.desktop      /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 extra/linux/WgShadertoy.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
