@@ -17,13 +17,13 @@ modules:
     sources:
       - type: git
         url: https://github.com/fralonra/wgshadertoy
-        tag: v0.3.0
-        commit: 9d277de5db4ff3dd863f0c4a0e642cf64be7cf14
+        tag: v0.3.1
+        commit: 364aca725ac5d4f2086e9ec590c0d31983a0ec9c
       - cargo-sources.json
     buildsystem: simple
     build-commands:
       - cargo --offline fetch --manifest-path Cargo.toml --verbose
-      - cargo --offline build --release --verbose
+      - GIT_COMMIT_HASH=$(git rev-parse --short HEAD) cargo --offline build --release --verbose
       - install -Dm755 target/release/wgshadertoy           /app/bin/wgshadertoy
       - install -Dm644 extra/linux/WgShadertoy.desktop      /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 extra/linux/WgShadertoy.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
