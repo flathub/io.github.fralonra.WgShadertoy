@@ -1,5 +1,11 @@
 [
     {
+        "type": "git",
+        "url": "https://github.com/fschutt/material-icons",
+        "commit": "628de25db1760dda253a13ad6f086c0af285a7f1",
+        "dest": "flatpak-cargo/git/material-icons-628de25"
+    },
+    {
         "type": "archive",
         "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/ab_glyph/ab_glyph-0.2.21.crate",
@@ -899,6 +905,32 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/enum-iterator/enum-iterator-0.8.1.crate",
+        "sha256": "2953d1df47ac0eb70086ccabf0275aa8da8591a28bd358ee2b52bd9f9e3ff9e9",
+        "dest": "cargo/vendor/enum-iterator-0.8.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"2953d1df47ac0eb70086ccabf0275aa8da8591a28bd358ee2b52bd9f9e3ff9e9\", \"files\": {}}",
+        "dest": "cargo/vendor/enum-iterator-0.8.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/enum-iterator-derive/enum-iterator-derive-0.8.1.crate",
+        "sha256": "8958699f9359f0b04e691a13850d48b7de329138023876d07cbd024c2c820598",
+        "dest": "cargo/vendor/enum-iterator-derive-0.8.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"8958699f9359f0b04e691a13850d48b7de329138023876d07cbd024c2c820598\", \"files\": {}}",
+        "dest": "cargo/vendor/enum-iterator-derive-0.8.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/env_logger/env_logger-0.9.3.crate",
         "sha256": "a12e6657c4c97ebab115a42dcee77225f7f482cdd841cf7088c657a42e9e00e7",
         "dest": "cargo/vendor/env_logger-0.9.3"
@@ -1700,6 +1732,24 @@
         "type": "inline",
         "contents": "{\"package\": \"62bb907fe88d54d8d9ce32a3cceab4218ed2f6b7d35617cafe9adf84e43919cb\", \"files\": {}}",
         "dest": "cargo/vendor/malloc_buf-0.0.6",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "shell",
+        "commands": [
+            "cp -r --reflink=auto \"flatpak-cargo/git/material-icons-628de25/.\" \"cargo/vendor/material-icons\""
+        ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"material-icons\"\nversion = \"0.2.0\"\nauthors = [ \"Felix Sch\u00fctt <felix.schuett@maps4print.com>\",]\ndescription = \"Strongly-typed codepoint mappings for the Google Material Icons font\"\nkeywords = [ \"gui\", \"material\", \"material-icons\", \"icon\", \"icons\",]\ncategories = [ \"gui\",]\nlicense = \"Apache-2.0\"\nrepository = \"https://github.com/fschutt/material-icons\"\nreadme = \"README.md\"\n\n[dependencies]\nenum-iterator = \"0.8.1\"\n",
+        "dest": "cargo/vendor/material-icons",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": null, \"files\": {}}",
+        "dest": "cargo/vendor/material-icons",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3940,7 +3990,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/fschutt/material-icons\"]\ngit = \"https://github.com/fschutt/material-icons\"\nreplace-with = \"vendored-sources\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }
