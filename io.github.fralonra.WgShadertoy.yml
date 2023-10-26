@@ -17,8 +17,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fralonra/wgshadertoy
-        tag: v0.3.1
-        commit: 364aca725ac5d4f2086e9ec590c0d31983a0ec9c
+        tag: v0.3.2
+        commit: 2d422b887ad40ebf5edff9d91eaa40fc593ea25f
       - cargo-sources.json
     buildsystem: simple
     build-commands:
