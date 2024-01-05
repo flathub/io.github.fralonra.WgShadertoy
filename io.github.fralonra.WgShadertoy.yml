@@ -1,6 +1,6 @@
 app-id: io.github.fralonra.WgShadertoy
 runtime: org.freedesktop.Sdk
-runtime-version: '22.08'
+runtime-version: "22.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -17,8 +17,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/fralonra/wgshadertoy
-        tag: v0.3.2
-        commit: 2d422b887ad40ebf5edff9d91eaa40fc593ea25f
+        tag: v0.3.3
+        commit: 1b7eae91dc8aeceb883193398cee733e2bbf6d51
       - cargo-sources.json
     buildsystem: simple
     build-commands:
